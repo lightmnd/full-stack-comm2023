@@ -1,0 +1,57 @@
+.footerContainer {
+    margin: 10rem 8rem;
+    color: rgb(39, 39, 39);
+    font-size: 1rem;
+    ul {
+        padding: 0;
+    }
+    li {
+        line-height: 1.9rem;
+        font-size: 0.8rem;
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: rgb(39, 39, 39);
+        }
+    }
+    .footerTop {
+        display: flex;
+        gap: 10px;
+        .parags {
+            flex: 1; // or width: calc(25% - 10px);
+            span {
+                text-align: justify;
+                font-size: 0.8rem;
+            }
+            h1 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .footerBottom {
+        .paragsBottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            .paragsBottomLeft {
+                display: flex;
+                .logo {
+                    margin-right: 15px;
+                    color: rgb(2, 174, 146);
+                    font-weight: bold;
+                }
+                span {
+                    font-size: 0.8rem;
+                    align-self: center;
+                }
+            }
+            .paragsBottomLeft {
+                img {
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}

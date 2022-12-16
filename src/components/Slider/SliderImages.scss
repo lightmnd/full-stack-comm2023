@@ -1,0 +1,58 @@
+.sliderContainer {
+    margin-top: 4rem;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    overflow: hidden;
+    .imagesContainer {
+        width: 300vw; // because we have 3 images
+        height: 100%;
+        display: flex;
+        transition: all 1s ease;
+        img {
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+        }
+    }
+    .arrowContainer {
+        display: flex;
+        position: absolute;
+        width: fit-content;
+        margin: auto;
+        left: 0;
+        right: 0;
+        gap: 8px;
+        bottom: 15px;
+        .arrowBack {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            opacity: 0.5;
+            border: 1px solid #f3f3f3;
+            svg {
+                position: absolute;
+                left: 12px;
+            }
+        }
+        .arrowFwd {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            opacity: 0.5;
+            background-color: #fff;
+            border: 1px solid #f3f3f3;
+            svg {
+                position: absolute;
+                right: 9px;
+            }
+        }
+    }
+}
