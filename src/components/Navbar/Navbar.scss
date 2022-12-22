@@ -1,6 +1,18 @@
 .navbar {
     height: 3rem;
+    a {
+        text-decoration: none;
+        color: rgb(39, 39, 39);
+    }
+    a:hover,
+    a:focus,
+    a:active {
+        color: rgb(2, 174, 146);
+    }
     .wrapper {
+        .item {
+            display: flex;
+        }
         display: flex;
         padding: 10px 30px;
         justify-content: space-between;
@@ -14,6 +26,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .logo {
+            color: rgb(2, 174, 146);
+            font-size: 2rem;
+            font-weight: bold;
+            >a {
+                color: rgb(2, 174, 146);
+            }
         }
         .right {
             display: flex;
@@ -38,7 +58,7 @@
                     left: 6px;
                 }
                 .itemCounter {
-                    background-color: rgb(9, 130, 216);
+                    background-color: rgb(2, 174, 146);
                     display: flex;
                     align-items: center;
                     justify-content: center;

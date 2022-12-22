@@ -30,7 +30,7 @@ export default function Navbar() {
             <Link to="/products/1">Children</Link>
           </div>
         </div>
-        <div className="center">
+        <div className="center logo">
           <Link to="/">R-STORE</Link>
         </div>
         <div className="right">
