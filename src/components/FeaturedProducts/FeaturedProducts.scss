@@ -1,21 +1,22 @@
 .featuredContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 5rem 8rem 1rem 8rem;
-    gap: 5%;
-    text-align: justify;
-    flex-direction: column;
     .featuredContainerWrapper {
-        display: flex;
-        flex-direction: row;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
     }
     .textContainer {
-        padding: 40px 20px 20px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        gap: 6%;
+        // padding: 40px 20px 20px 20px;
         h3 {
             font-size: 1.4em;
         }
         span {
+            text-align: justify;
+            white-space: wrap;
             font-size: 0.8em;
             color: rgb(39, 39, 39);
         }

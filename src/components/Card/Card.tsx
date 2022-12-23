@@ -23,8 +23,6 @@ export default function Card(props: FeaturedProps) {
         <div className="featuredContainerWrapper">
           <div className="textContainer">
             <h3>{toUppercase}</h3>
-          </div>
-          <div className="textContainer">
             <span>{description}</span>
           </div>
         </div>
