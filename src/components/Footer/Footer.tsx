@@ -35,13 +35,13 @@ export default function Footer() {
             <Link to="/pages">Pages</Link>
           </li>
           <li>
-            <Link to="/faq">Stores</Link>
+            <Link to="/stores">Stores</Link>
           </li>
           <li>
-            <Link to="/faq">Compare</Link>
+            <Link to="/compare">Compare</Link>
           </li>
           <li>
-            <Link to="/faq">Cookies</Link>
+            <Link to="/cookies">Cookies</Link>
           </li>
         </div>
         <div className="parags">

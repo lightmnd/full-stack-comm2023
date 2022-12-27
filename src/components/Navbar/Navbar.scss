@@ -10,8 +10,14 @@
         color: rgb(2, 174, 146);
     }
     .wrapper {
+        // @media (min-width: 411px) {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
         .item {
             display: flex;
+            align-items: center;
+            font-size: 18px;
         }
         display: flex;
         padding: 10px 30px;

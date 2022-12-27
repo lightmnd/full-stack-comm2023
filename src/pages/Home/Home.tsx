@@ -3,6 +3,7 @@ import SliderImages from "./../../components/Slider/SliderImages";
 import FeaturedProducts from "./../../components/FeaturedProducts/FeaturedProducts";
 import axios from "axios";
 import CategorySection from "../../components/CategorySection/CategorySection";
+import Contact from "./../../components/Contact/Contact";
 
 export default function Home() {
   const baseURL = "https://fakestoreapi.com/products/";
@@ -40,6 +41,7 @@ export default function Home() {
         }
         fashionData={fashionData}
       />
+      <Contact />
     </div>
   );
 }
