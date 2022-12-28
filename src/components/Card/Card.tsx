@@ -37,7 +37,7 @@ export default function Card(props: FeaturedProps) {
                   return (
                     <>
                       {item.rating.rate >= 4 ? (
-                        <div>
+                        <>
                           <span className="topRated">Top rated!</span>
                           <div className="featuredImagesWrapper">
                             <img
@@ -55,7 +55,7 @@ export default function Card(props: FeaturedProps) {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </>
                       ) : (
                         <div className="featuredImagesWrapper">
                           <img

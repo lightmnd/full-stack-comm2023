@@ -1,5 +1,7 @@
 .navbar {
-    height: 3rem;
+    height: 80px;
+    // display: flex;
+    // flex: 1;
     a {
         text-decoration: none;
         color: rgb(39, 39, 39);
@@ -10,6 +12,11 @@
         color: rgb(2, 174, 146);
     }
     .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        //overflow: hidden;
         // @media (min-width: 411px) {
         //     display: flex;
         //     flex-direction: column;
@@ -19,18 +26,17 @@
             align-items: center;
             font-size: 18px;
         }
-        display: flex;
-        padding: 10px 30px;
-        justify-content: space-between;
+        // display: flex;
+        // padding: 10px 30px;
         .left {
             display: flex;
-            flex-direction: row;
+            // flex-direction: row;
             align-items: center;
             gap: 25px;
         }
         .center {
             display: flex;
-            justify-content: center;
+            //justify-content: center;
             align-items: center;
         }
         .logo {
@@ -43,7 +49,7 @@
         }
         .right {
             display: flex;
-            flex-direction: row;
+            // flex-direction: row;
             align-items: center;
             gap: 25px;
             .icons {
@@ -51,6 +57,7 @@
                 justify-content: space-between;
                 align-items: center;
                 gap: 25px;
+                cursor: pointer;
             }
             .shoppingCart {
                 display: flex;
