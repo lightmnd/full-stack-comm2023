@@ -6,13 +6,24 @@ type CardProps = {
   title: string;
   description: string;
   fashionData: Array<any> | never;
+  loading: boolean;
+  error: boolean;
 };
 
 export default function FeaturedProducts(props: CardProps) {
   const { title, description, fashionData } = props;
   return (
-    <>
-      <Card title={title} description={description} fashionData={fashionData} />
-    </>
+    <div className="listOfCards">
+      <Card
+        title={title}
+        description={description}
+        fashionData={fashionData}
+        catId={0}
+        priceRange={0}
+        sortBy={""}
+        loading={false}
+        error={false}
+      />
+    </div>
   );
 }

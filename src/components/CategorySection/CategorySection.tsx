@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./CategorySection.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 type ImageType = {
   image: string | never;
@@ -9,24 +10,19 @@ type ImageType = {
 
 export default function CategorySection() {
   const baseURL = "https://fakestoreapi.com/products/";
+  const { fashionData, loading, error } = useFetch(baseURL);
   const [images, setImages] = useState<any[]>([]);
-  const getCardData = async () => {
-    try {
-      const data = await axios.get(baseURL);
-      console.log(data);
-      if (data.status === 200) {
-        setImages(data.data);
-      }
-    } catch (error) {
-      throw new Error("Something went wrong. - ");
-    }
-  };
 
   useEffect(() => {
-    getCardData();
-  }, [baseURL]);
+    // getCardData();
+    setImages(fashionData);
+  }, [baseURL, fashionData]);
 
-  return (
+  return error ? (
+    <p>"Ops! Something went wrong..."</p>
+  ) : loading ? (
+    <p>"loading..."</p>
+  ) : (
     <div className="categoryContainer">
       <div className="categoryLeft">
         <div className="leftTop">

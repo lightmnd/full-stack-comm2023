@@ -3,7 +3,12 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./SliderImages.scss";
 
-export default function SliderImages() {
+type DataType = {
+  loading: boolean;
+  error: boolean;
+};
+
+export default function SliderImages({ loading, error }: DataType) {
   const [imageNo, setImageNo] = useState(0);
 
   const images = [
@@ -20,7 +25,11 @@ export default function SliderImages() {
     setImageNo(imageNo === images.length - 1 ? 0 : (prev) => prev + 1);
   };
 
-  return (
+  return error ? (
+    <p>"Ops! Something went wrong..."</p>
+  ) : loading ? (
+    <p>"loading..."</p>
+  ) : (
     <div className="sliderContainer">
       <div
         className="imagesContainer"

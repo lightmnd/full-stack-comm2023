@@ -7,28 +7,34 @@ type FeaturedProps = {
   title: string;
   description: string;
   fashionData: Array<any> | never;
+  loading: boolean;
+  error: boolean;
 };
 
 export default function ProductsFilter(props: FeaturedProps) {
   const { title, description, fashionData } = props;
   const [rangeValue, setRangeValue] = useState(0);
-  let catId: any = useParams();
-  catId = parseInt(catId.id);
+  const [sortBy, setSortBy] = useState("");
+  const catId = parseInt(useParams().id!);
 
   const handleRange = (e: any) => {
     setRangeValue(e.target.value);
   };
 
-  console.log(fashionData);
-
   return (
     <div className="filterContainer">
       <div className="filterLeft">
         <h3>Product Categories</h3>
-        <label htmlFor="hat">Hat</label>
-        <input type="checkbox" name="hat" id="hat" />
-        <label htmlFor="tshirt">T-shirt</label>
-        <input type="checkbox" name="tshirt" id="tshirt" />
+        <div className="productCatContainer">
+          <div>
+            <input type="checkbox" name="hat" id="hat" />
+            <label htmlFor="hat">Hat</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tshirt" id="tshirt" />
+            <label htmlFor="tshirt">T-shirt</label>
+          </div>
+        </div>
         <h3>Filter by Price</h3>
         <div className="filterByPriceContainer">
           <span>0</span>
@@ -38,16 +44,37 @@ export default function ProductsFilter(props: FeaturedProps) {
         <h3>Sprt by</h3>
         <div className="sortByPriceContainer">
           <label htmlFor="lowestPrice">Lowest Price</label>
-          <input type="radio" name="lowestPrice" id="lowestPrice" />
+          <input
+            type="radio"
+            name="lowestPrice"
+            id="lowestPrice"
+            onChange={(e) => setSortBy("asc")}
+          />
           <label htmlFor="highestPrice">Highest Price</label>
-          <input type="radio" name="highestPrice" id="highestPrice" />
+          <input
+            type="radio"
+            name="highestPrice"
+            id="highestPrice"
+            onChange={(e) => setSortBy("desc")}
+          />
         </div>
       </div>
       <div className="filterRight">
         <div className="topImage">
           <img src="https://source.unsplash.com/WLUHO9A_xik/" alt="" />
-          <Card title={""} description={""} fashionData={fashionData} />
         </div>
+        {/* <div className="listCard"> */}
+        <Card
+          title={title}
+          description={description}
+          fashionData={fashionData}
+          catId={catId}
+          priceRange={rangeValue}
+          sortBy={sortBy}
+          loading={false}
+          error={false}
+        />
+        {/* </div> */}
       </div>
     </div>
   );
